@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  TheView.h
 //  TestRect
 //
 //  Created by Pierre-Alexandre Poirier on 2013-06-14.
@@ -8,12 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@class TheView;
+@interface TheView : UIView {
 
-@interface ViewController : UIViewController
-{
-    IBOutlet TheView *myView;
-    NSTimer *timer;
 }
+
+-(void) update;
 
 @end

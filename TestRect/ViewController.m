@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "TheView.h"
 
 @interface ViewController ()
 
@@ -17,13 +18,20 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+	// setting the 'frame rate'
+    timer = [NSTimer scheduledTimerWithTimeInterval:1/8.0f target:self selector:@selector(updateMyView) userInfo:Nil repeats:YES];
+}
+
+- (void)updateMyView
+{
+    // updating the view
+    [myView update];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
 }
 
 @end
